@@ -3,22 +3,23 @@
     <input class="sheet-HideConfig" type="checkbox" checked name="attr_is_config"/><span class="sheet-is-config"><span style='font-family:"Pictos";'>y</span></span>
     <div class="sheet-config" style="text-align:left">
         <div style="text-align:left"><b>Era Selection</b></div>
-	    <input type="checkbox" style="display:none" lass="sheet-showskills" name="attr_showskills" value="7"><span style="display:none">Invictus</span>
-	    <input type="checkbox" style="display:none" lass="sheet-showskills" name="attr_showskills" value="1"><span style="display:none">Dark Ages</span>
-	    <input type="checkbox" style="display:none" class="sheet-showskills" name="attr_showskills" value="5"><span style="display:none">Old West</span>
-	    <input type="checkbox" style="display:none" class="sheet-showskills" name="attr_showskills" value="2" checked="checked"><span style="display:none">1920's</span>
+	    <input type="checkbox" style="display:none" class="sheet-showskills" name="attr_showskills" value="1" checked="checked"><span style="display:none">1920's</span>
+	    <input type="checkbox" style="display:none" lass="sheet-showskills" name="attr_showskills" value="2"><span style="display:none">Dark Ages</span>
 	    <input type="checkbox" style="display:none" class="sheet-showskills" name="attr_showskills" value="3"><span style="display:none">Modern</span>
-	    <input type="checkbox" style="display:none" class="sheet-showskills" name="attr_showskills" value="6"><span style="display:none">Icarus</span>
 	    <input type="checkbox" style="display:none" class="sheet-showskills" name="attr_showskills" value="4"><span style="display:none">End Times</span>
-	        <div>
+	    <input type="checkbox" style="display:none" class="sheet-showskills" name="attr_showskills" value="5"><span style="display:none">Old West</span>
+	    <input type="checkbox" style="display:none" class="sheet-showskills" name="attr_showskills" value="6"><span style="display:none">Icarus</span>
+	    <input type="checkbox" style="display:none" lass="sheet-showskills" name="attr_showskills" value="7"><span style="display:none">Invictus</span>
+        <div>
 				<select class="game-select" name="attr_showskills">
-					<option value="7">Invictus(Roman Era)</option>
-					<option value="1">Dark Ages</option>
-					<option value="5">Down Darker Trails(Old West)</option>
-					<option value="2">1920's(Classic)</option>
+					<option value="1">1920's(Classic)</option>
+					<option value="2">Dark Ages</option>
 					<option value="3">Modern</option>
-					<option value="6">Icarus(Space Exploration Era)</option>
 					<option value="4">End Times(Post Apocalyptic Era)</option>
+					<option value="5">Down Darker Trails(Old West)</option>
+					<option value="6">Icarus(Space Exploration Era)</option>
+					<option value="7">Invictus(Roman Era)</option>
+					
 				</select>
 		    </div>
 	    <div style="text-align:left"><b>Pulp Options</b></div>
@@ -454,7 +455,7 @@
             <table style="width:100%">
                 <tr>
                     <td>
-                        <button class='old-roll' type='roll' value='&{template:coc} {{name=SAN Roll}} {{success=[[@{san}]]}} {{hard=[[floor(@{san}/2)]]}} {{extreme=[[floor(@{san}/5)]]}} {{roll1=[[1d100]]}} {{roll2=[[1d100]]}} {{roll3=[[1d100]]}}' name='roll_san_check' />
+                        <button class='old-roll' type='roll' value='&{template:coc} {{name=@{sanity-u} Roll}} {{success=[[@{san}]]}} {{hard=[[floor(@{san}/2)]]}} {{extreme=[[floor(@{san}/5)]]}} {{roll1=[[1d100]]}} {{roll2=[[1d100]]}} {{roll3=[[1d100]]}}' name='roll_san_check' />
 						<button class='new-roll' type='roll' value='&{template:coc-1} {{name=SAN Roll}} {{success=[[@{san}]]}} {{hard=[[floor(@{san}/2)]]}} {{extreme=[[floor(@{san}/5)]]}} {{roll1=[[1d100]]}}' name='roll_san_check' />
                     </td>
                     <td colspan="2">
@@ -681,8 +682,8 @@
             <table style="width:100%">
                 <tr>
                     <td>
-                        <button class='old-roll' type='roll' value='&{template:coc} {{name=SAN Roll}} {{success=[[@{san}]]}} {{hard=[[floor(@{san}/2)]]}} {{extreme=[[floor(@{san}/5)]]}} {{roll1=[[1d100]]}} {{roll2=[[1d100]]}} {{roll3=[[1d100]]}}' name='roll_san_check' />
-						<button class='new-roll' type='roll' value='&{template:coc-1} {{name=SAN Roll}} {{success=[[@{san}]]}} {{hard=[[floor(@{san}/2)]]}} {{extreme=[[floor(@{san}/5)]]}} {{roll1=[[1d100]]}}' name='roll_san_check' />
+                        <button class='old-roll' type='roll' value='&{template:coc} {{name=@{sanity-u} Roll}} {{success=[[@{san}]]}} {{hard=[[floor(@{san}/2)]]}} {{extreme=[[floor(@{san}/5)]]}} {{roll1=[[1d100]]}} {{roll2=[[1d100]]}} {{roll3=[[1d100]]}}' name='roll_san_check' />
+						<button class='new-roll' type='roll' value='&{template:coc-1} {{name=@{sanity-u} Roll}} {{success=[[@{san}]]}} {{hard=[[floor(@{san}/2)]]}} {{extreme=[[floor(@{san}/5)]]}} {{roll1=[[1d100]]}}' name='roll_san_check' />
                     </td>
                     <td colspan="2">
                         <input class="secondary-attr-input" data-i18n-placeholder="current" placeholder="current" type="text" min="0" name="attr_san">
